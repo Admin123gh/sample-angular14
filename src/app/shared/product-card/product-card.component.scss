@@ -1,0 +1,83 @@
+@import '/src/styles.scss';
+
+.product-card {
+    .card {
+        position: relative;
+        cursor: pointer;
+        &:hover {
+            .icons {
+                display: block;
+            }
+        }
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+            background: #e3e3e3;
+        }
+        .icons {
+            display: none;
+            position: absolute;
+            right: 12px;
+            top: 22px;
+            ul {
+                list-style: none;
+                margin-bottom: 0px;
+                padding-left: 0px;
+                li {
+                    padding-top: 10px;
+                    i {
+                        color: #ef6c00;
+                        font-size: 19px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        // &:hover{
+                        //     opacity: 0;
+                        //     transition: .4s ease;
+                        //     color: red;
+                        // }
+                    }
+                }
+            }
+        }
+        .card-body {
+            p {
+                font-size: 15px;
+                color: silver;
+                padding-bottom: 3px;
+            }
+            h5 {
+                font-size: 18px;
+                color: #333;
+            }
+            .ranking {
+                span {
+                    font-size: 15px;
+                    &.checked {
+                        color: orange;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .cart {
+                padding-top: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                p {
+                    font-size: 18px;
+                    color: black;
+                }
+                i {
+                    font-size: 16px;
+                    color: white;
+                    background-color: #ef6c00;
+                    border-radius: 100px;
+                    border: 1px solid #ef6c00;
+                    padding: 7px;
+                }
+            }
+        }
+    }
+}

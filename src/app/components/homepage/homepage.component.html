@@ -1,0 +1,87 @@
+<div class="homepage">
+    <!-- sliders section  -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-9">
+                <div class="slide-1" style="background-image: url('../../../assets/img/s-1.jpg');"></div>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="slide-2" style="background-image: url('../../../assets/img/s-1.jpg');"></div>
+                    </div>
+                    <div class="col-12">
+                        <div class="slide-3" style="background-image: url('../../../assets/img/s-1.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- products sections  -->
+    <div class="product-cards">
+        <div class="container-fluid">
+            <!-- featured products  -->
+            <div class="row featured-products">
+                <div class="col-3 add-cards">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="add-slide1" style="background-image: url('../../../assets/img/s-1.jpg');"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="add-slide2" style="background-image: url('../../../assets/img/s-1.jpg');"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9">
+                    <div class="row">
+                        <div class="col-12 heading">
+                            <h4>Featured Products</h4>
+                        </div>
+                        <div class="col-12 col-md-3 col-lg-3" *ngFor="let item of cards">
+                            <app-product-card [data]="item" routerLink="/product/product-detail"></app-product-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- latest-products  -->
+            <div class="row latest-products">
+                <div class="col-12 heading">
+                    <h4>Latest Products</h4>
+                </div>
+                <div class="col-12 col-md-3 col-lg-3" *ngFor="let item of cards">
+                    <app-product-card [data]="item" routerLink="/product/product-detail"></app-product-card>
+                </div>
+            </div>
+
+            <!-- top-selling  -->
+            <div class="row top-selling">
+                <div class="col-4 heading">
+                    <h4>Top Selling Products</h4>
+                    <div class="row">
+                        <div class="col-12" *ngFor="let item of smallCards">
+                            <app-small-product-card [data]="item" routerLink="/product/product-detail"></app-small-product-card>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 heading">
+                    <h4>Sale Products</h4>
+                    <div class="row">
+                        <div class="col-12" *ngFor="let item of smallCards">
+                            <app-small-product-card [data]="item" routerLink="/product/product-detail"></app-small-product-card>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 heading">
+                    <h4>Hot Products</h4>
+                    <div class="row">
+                        <div class="col-12" *ngFor="let item of smallCards">
+                            <app-small-product-card [data]="item" routerLink="/product/product-detail"></app-small-product-card>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="product-card">
+    <div class="card" style="width: auto;">
+        <img class="card-img-top" src="{{data.img}}" alt="Card image cap">
+        <div class="icons">
+            <ul>
+                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="#"><i class="fa-regular fa-eye"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-arrows-rotate"></i></a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <p class="card-text">{{data.category}}</p>
+            <h5 class="card-title">{{data.title}}</h5>
+            <div class="ranking pt-1">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+            </div>
+            <div class="cart">
+                <p>{{data.amount}}</p>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="product-listing">
+    <div class="sub-bar d-flex justify-content-between">
+        <p>Shop</p>
+        <p><a href="#">Home</a> / Shop</p>
+    </div>
+    <div class="search-filter">
+        <div class="container-fluid">
+            <div class="row wrapper d-flex justify-content-between">
+                <app-search-bar></app-search-bar>
+                <div class="filter-icons">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-list"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-table-cells-large"></i></a></li>
+                        <li><a href="#"><i class="fa-solid fa-table-cells"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="product-cards">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 col-lg-3 mt-4" *ngFor="let item of cards">
+                    <app-product-card [data]="item" routerLink="/product/product-detail"></app-product-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

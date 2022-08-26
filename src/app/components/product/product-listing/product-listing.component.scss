@@ -1,0 +1,47 @@
+@import '/src/styles.scss';
+
+.product-listing {
+    .sub-bar {
+        border-bottom: 1px solid #ccc;
+        padding: 0.5rem 2rem;
+
+        p {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            text-transform: uppercase;
+            a {
+                color: #333;
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+    .search-filter {
+        .container-fluid {
+            padding-right: 2.3rem;
+            padding-left: 2.3rem;
+            .wrapper {
+                border-top: 1px solid #ccc;
+                margin: 55px 0 25px 0;
+                padding: 20px 0;
+                border-bottom: 1px solid #ccc;
+            }
+            .filter-icons {
+                ul {
+                    display: flex;
+                    list-style: none;
+                    margin-bottom: 0px;
+                    padding-left: 0px;
+                    li {
+                        padding: 0 8px;
+                        a {
+                            font-size: 23px;
+                            color: #ef6c00;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

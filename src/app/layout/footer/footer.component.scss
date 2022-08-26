@@ -1,0 +1,59 @@
+@import '/src/styles.scss';
+
+.footer {
+    background: #f7f7f7;
+    padding: 4% 0 3% 0;
+    margin-top: 3%;
+    .com-breif{
+        h1 {
+            color: #ef6c00;
+            font-size: 30px;
+            font-weight: 600;
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+        }
+    }
+    .services {
+        h1 {
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 13px;
+        }
+        ul  {
+            list-style: none;
+            margin-bottom: 0px;
+            padding-left: 0px;
+            li {
+                padding: 5px 0;
+                a {
+                    font-size: 15px;
+                    color: #333;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .contactus {
+        h1 {
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            padding-bottom: 18px;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+            padding-bottom: 10px;
+            i {
+                font-size: 17px;
+                color: #ef6c00;
+                padding-right: 8px;
+            }
+        }
+    }
+}
