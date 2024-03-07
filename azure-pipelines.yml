@@ -17,22 +17,3 @@ steps:
 - script: |
     npm run build
   displayName: 'NpmBuild'
-
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourceDirectory)'
-    Contents: 'dist/*'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  displayName: 'CopyProjectFiles'
-
-- task: PublishPipelineArtifact@1
-  inputs:
-    artifactName: SampleAngular14
-    targetPath: '$(Build.ArtifactStagingDirectory)'
-    publishLocation: 'pipeline'
-  displayName: 'PublishNpmArtifact'
-  
-- task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: Release'
-  inputs:
-    ArtifactName: Release
