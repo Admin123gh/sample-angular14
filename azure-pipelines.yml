@@ -1,0 +1,35 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: UseNode@1
+  displayName: 'Install Node.js'
+  inputs:
+    version: '16.x'
+
+- script: |
+    npm install
+  displayName: 'NpmInstall'
+
+- script: |
+    npm run build
+  displayName: 'NpmBuild'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(Build.SourcesDirectory)'
+    contents:
+       src/*
+       public/*
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'CopyProjectFiles'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    artifactName: SampleAngular14
+    targetPath: '$(Build.ArtifactStagingDirectory)'
+    publishLocation: 'pipeline'
+  displayName: 'PublishNpmArtifact'
