@@ -17,3 +17,10 @@ steps:
 - script: |
     npm run build
   displayName: 'NpmBuild'
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    artifactName: SampleAngular14
+    targetPath: '$(Build.SourcesDirectory)/dist'
+    publishLocation: 'pipeline'
+  displayName: 'PublishNpmArtifact'
