@@ -20,11 +20,9 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    sourceFolder: '$(Build.SourcesDirectory)'
-    contents: |
-       src/*
-       public/*
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    SourceFolder: '$(Build.SourceDirectory)'
+    Contents: 'dist/*'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
   displayName: 'CopyProjectFiles'
 
 - task: PublishPipelineArtifact@1
@@ -33,3 +31,8 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)'
     publishLocation: 'pipeline'
   displayName: 'PublishNpmArtifact'
+  
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact: Release'
+  inputs:
+    ArtifactName: Release
