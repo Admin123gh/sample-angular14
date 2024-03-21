@@ -24,3 +24,17 @@ steps:
     targetPath: '$(Build.SourcesDirectory)/dist'
     publishLocation: 'pipeline'
   displayName: 'PublishNpmArtifact'
+
+jobs:
+- deployment: VMDeploy
+  displayName: UbuntuVM deploy
+  environment:
+    name:  <UbuntuVM>
+    resourceType: VirtualMachine
+    tags:
+  strategy:
+    runOnce:
+      deploy:
+        steps:
+        - script: |
+            cd $(Build.SourcesDirectory)/dist
